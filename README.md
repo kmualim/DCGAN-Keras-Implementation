@@ -35,11 +35,17 @@ or alternatively:
 `$ python download.py` 
 ```
 ## Usage: 
-To run the experiment with default parameters: 
+To run the experiment with default parameters:
+1. download the ipynb notebook 
+2. run the ipynb notebook
+
+or alternatively:
 ```
 `$ python dcgan-mnist.py` 
 ```
 Parameters can be changed in `dcgan-mnist.py`
+
+Values are documented in the ipynb notebook for easy reference.
 
 ## References: 
 1. https://medium.com/@jonathan_hui/gan-dcgan-deep-convolutional-generative-adversarial-networks-df855c438f
