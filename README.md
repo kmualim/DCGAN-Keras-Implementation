@@ -47,6 +47,8 @@ Parameters can be changed in `dcgan-mnist.py`
 
 Values are documented in the ipynb notebook for easy reference.
 
+Code was constructed with help from a [dcgan tutorial](https://towardsdatascience.com/implementing-a-generative-adversarial-network-gan-dcgan-to-draw-human-faces-8291616904a) by Felix Mohr. 
+
 ## References: 
 1. https://medium.com/@jonathan_hui/gan-dcgan-deep-convolutional-generative-adversarial-networks-df855c438f
 
