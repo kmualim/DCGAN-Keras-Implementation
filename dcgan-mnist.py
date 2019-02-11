@@ -25,19 +25,19 @@ class GAN(object):
       dropout=0.25 
       input_shape = (self.img_rows, self.img_cols, self.channel)
       
-      model.add(Conv2D(depth*1, 3, strides=2, input_shape=input_shape, padding='same'))#kernel_initializer='random_uniform', bias_initializer='zeros'))
+      model.add(Conv2D(depth*1, 3, strides=2, input_shape=input_shape, padding='same', kernel_initializer='random_uniform'))
       model.add(BatchNormalization(momentum=0.9))
       model.add(LeakyReLU(alpha=0.2))
       model.add(Dropout(dropout))
-      model.add(Conv2D(depth*2, 3, strides=2, padding='same')) #activation=LeakyReLU(alpha=0.2))) #kernel_initializer='random_uniform', bias_initializer='zeros'))
+      model.add(Conv2D(depth*2, 3, strides=2, padding='same',kernel_initializer='random_uniform'))
       model.add(BatchNormalization(momentum=0.9))
       model.add(LeakyReLU(alpha=0.2))
       model.add(Dropout(dropout))
-      model.add(Conv2D(depth*4, 3, strides=2, padding='same')) #activation=LeakyReLU(alpha=0.2)))#,kernel_initializer='random_uniform', bias_initializer='zeros'))
+      model.add(Conv2D(depth*4, 3, strides=2, padding='same',kernel_initializer='random_uniform'))
       model.add(BatchNormalization(momentum=0.9))
       model.add(LeakyReLU(alpha=0.2))
       model.add(Dropout(dropout))
-      model.add(Conv2D(depth*8, 3, strides=2, padding='same')) #activation=LeakyReLU(alpha=0.2)))#,kernel_initializer='random_uniform', bias_initializer='zeros'))
+      model.add(Conv2D(depth*8, 3, strides=2, padding='same',kernel_initializer='random_uniform'))
       model.add(BatchNormalization(momentum=0.9))
       model.add(LeakyReLU(alpha=0.2))
       model.add(Dropout(dropout))
@@ -77,11 +77,11 @@ class GAN(object):
       # In: dim X dim X depth
       # Out: 2*dim X 2*dim X depth/2 
 
-      generator.add(Conv2D(depth, 3, padding='same'))#kernel_initializer='random_uniform', bias_initializer='zeros'))
+      generator.add(Conv2D(depth, 3, padding='same'))
       generator.add(BatchNormalization(momentum=0.9))
       generator.add(Activation('relu'))
       generator.add(UpSampling2D())
-      generator.add(Conv2D(int(depth/2), 3, padding='same'))#,kernel_initializer='random_uniform', bias_initializer='zeros'))
+      generator.add(Conv2D(int(depth/2), 3, padding='same'))
       generator.add(BatchNormalization(momentum=0.9))
       generator.add(Activation('relu'))
      
