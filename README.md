@@ -7,8 +7,8 @@ The following repository has different files:
 3. dcgan-mnist.py 
 
 Things to note: 
-After every 50 training iterations, a .png file will be saved locally within the colab notebook environment or on your disc depending on which you've used to run. 
-Both the ipynb and python script can be used to run the model; ipynb notebook, however, have the before and after images as well as the plotted loss graphs. 
+After every 50 training iterations, a .png file will be saved locally within the colab notebook environment or on your disc depending on which you've used to run. <br> 
+Both the ipynb and python script can be used to run the model; ipynb notebook, however, contains before and after images as well as the plotted loss graphs. 
 
 ## Dependencies: 
 * [Python 3.6](https://www.python.org/downloads/) 
@@ -25,11 +25,7 @@ Image from [1].
 ## Data: 
 The dataset consists of 60,000 **28x28** grayscale images of 10 digits, along with a test set of 10,000 images. 
 In this implementation, we only utilized the training set.
-To download: 
-```
-`from keras.datasets import mnist`
-`(x_train, y_train), (x_test, y_test) = mnist.load_data()`
-```
+The data can be downloded from [here](http://yann.lecun.com/exdb/mnist/)
 or alternatively: 
 ```
 `$ python download.py` 
@@ -47,7 +43,7 @@ Parameters can be changed in `dcgan-mnist.py`
 
 Values are documented in the ipynb notebook for easy reference.
 
-Code was constructed with help from a [dcgan tutorial](https://towardsdatascience.com/implementing-a-generative-adversarial-network-gan-dcgan-to-draw-human-faces-8291616904a) by Felix Mohr. 
+Code was constructed with help from [dcgan](https://towardsdatascience.com/implementing-a-generative-adversarial-network-gan-dcgan-to-draw-human-faces-8291616904a) by Felix Mohr. 
 
 ## References: 
 1. https://medium.com/@jonathan_hui/gan-dcgan-deep-convolutional-generative-adversarial-networks-df855c438f
